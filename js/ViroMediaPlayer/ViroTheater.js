@@ -207,7 +207,7 @@ var ViroTheater = createReactClass({
 
 ViroAnimations.registerAnimations({
     fadeOut:{properties:{opacity: 0.0}, duration: 500},
-    fadeIn:{properties:{opactiy: 1.0}, duration: 500},
+    fadeIn:{properties:{opacity: 1.0}, duration: 500},
 });
 
 ViroMaterials.createMaterials({
