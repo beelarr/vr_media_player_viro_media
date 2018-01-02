@@ -24,7 +24,7 @@ var videos = [
 ];
 
 var Viro360Theater = createReactClass({
-    getInitalState() {
+    getInitialState() {
         return {
             videoControlsAnimation: 'fadeIn',
             videoPaused: false,
@@ -210,4 +210,4 @@ ViroAnimations.registerAnimations({
     fadeIn:{properties:{opacity: 0.0}, duration:500},
 });
 
-module.exports = Viro360Video;
+module.exports = Viro360Theater;

@@ -30,7 +30,7 @@ var videos = [
     {uri:'https://s3-us-west-2.amazonaws.com/viro/Assets/ProductVideo.mp4'},
 ];
 
-var ViroTheater = createReactClass({
+var ViroTheatre = createReactClass({
     getInitialState() {
         return {
             videoControlsAnimation:"fadeIn",
@@ -58,14 +58,14 @@ var ViroTheater = createReactClass({
                 {this._renderVideoControl()}
 
             </ViroScene>
-        )
+        );
     },
 
     _onVideoTapped ()  {
         var videoControlsAnimationState = this.state.videoControlsAnimation;
         if (videoControlsAnimationState=="fadeIn") {
-            videoControlsAnimationState="fadeOut"
-        }else {
+            videoControlsAnimationState="fadeOut";
+        } else {
             videoControlsAnimationState="fadeIn";
         }
 
@@ -135,7 +135,7 @@ var ViroTheater = createReactClass({
                     source={require('./res/icon_360.png')}
                     hoverSource={require('./res/icon_360_hover.png')}
                     clickSource={require('./res/icon_360_hover.png')}
-                    onClick={this._launchTheaterScene}
+                    onClick={this._launchTheatreScene}
 
                 />
 
@@ -165,7 +165,7 @@ var ViroTheater = createReactClass({
                     scale={[1, 1, 1]}
                     width={buttonSize}
                     height={buttonSize}
-                    source={require('./res/pause.png')}
+                    source={require('./res/play.png')}
                     hoverSource={require('./res/pause_hover.png')}
                     clickSource={require('./res/pause_hover.png')}
                     onClick={this._togglePauseVideo}
@@ -175,8 +175,8 @@ var ViroTheater = createReactClass({
         }
     },
 
-    _launchTheaterScene(){
-        this.props.sceneNavigator.jump("Viro360Theater", {scene:require('./Viro360Theater')});
+    _launchTheatreScene(){
+        this.props.sceneNavigator.jump("Viro360Theatre", {scene:require('./Viro360Theater')});
     },
 
     _togglePauseVideo() {
@@ -221,4 +221,4 @@ ViroMaterials.createMaterials({
     },
 });
 
-module.exports = ViroTheater;
+module.exports = ViroTheatre;
