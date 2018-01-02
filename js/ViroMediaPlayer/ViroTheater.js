@@ -25,11 +25,10 @@ var VIDEO_REF = 'videoref';
 var VideoControlRef = "VideoControlRef";
 
 var videos = [
-    // {uri:'https://s3-us-west-2.amazonaws.com/viro/Assets/Viro_Media_Video.mp4'},
-    // {uri:'https://s3-us-west-2.amazonaws.com/viro/Assets/ProductVideo.mp4'},
-    require('./res/elf.mp4'),
-    require('./res/Luke Confronts Darth Vader - Return of the Jedi [1080p HD].mp4'),
-    require('./res/Enjoying my coffee.mp4')
+
+    require('./res/dude.mp4'),
+    require('./res/yoda.mp4'),
+    require('./res/lord.mp4'),
 ];
 
 var ViroTheatre = createReactClass({
@@ -63,7 +62,7 @@ var ViroTheatre = createReactClass({
         );
     },
 
-    _onVideoTapped ()  {
+    _onVideoTapped() {
         var videoControlsAnimationState = this.state.videoControlsAnimation;
         if (videoControlsAnimationState=="fadeIn") {
             videoControlsAnimationState="fadeOut";
