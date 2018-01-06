@@ -19,7 +19,7 @@ var VIDEO_REF = 'videoref';
 
 var videos = [
     require('./res/gp.mp4'),
-    {uri:'https://s3-us-west-2.amazonaws.com/viro/MediaDemo360_1.mp4'},
+    {uri:'https://s3-us-west-2.amazonaws.com/viro/MediaDemo360_1.mp4'}
 
 ];
 
