@@ -18,16 +18,15 @@ var buttonSize = 0.25;
 var VIDEO_REF = 'videoref';
 
 var videos = [
+    require('./res/gp.mp4'),
     {uri:'https://s3-us-west-2.amazonaws.com/viro/MediaDemo360_1.mp4'},
-    {uri:'https://s3-us-west-2.amazonaws.com/viro/MediaDemo360_2.mp4'},
-    require('./res/gp.mp4')
 
 ];
 
 var Viro360Theater = createReactClass({
     getInitialState() {
         return {
-            videoControlsAnimation: 'fadeIn',
+            videoControlsAnimation: "fadeIn",
             videoPaused: false,
             loopVideo: true,
             videoIndex: 0,
@@ -58,29 +57,24 @@ var Viro360Theater = createReactClass({
 
     _onVideoTapped() {
         var videoControlsAnimationState = this.state.videoControlsAnimation;
-        if (videoControlsAnimationState=='fadeIn') {
-            videoControlsAnimationState='fadeOut';
+        if (videoControlsAnimationState=="fadeIn") {
+            videoControlsAnimationState="fadeOut";
         } else {
-            videoControlsAnimationState='fadeIn';
+            videoControlsAnimationState="fadeIn";
         }
 
         this.setState({
-            videoControlsAnimation:videoControlsAnimationState,
-            runAnimation:true,
+            videoControlsAnimation: videoControlsAnimationState,
+            runAnimation: true,
         });
     },
 
     _renderVideoControl() {
         return(
             <ViroNode
-                position={[0, -0.8, 0]}
+                position={[0,-0.8,0]}
                 opacity={1.0}
-                animation={{
-                    name: this.state.videoControlsAnimation,
-                    run: this.state.runAnimation,
-                    loop: false
-                }}
-            >
+                animation={{name : this.state.videoControlsAnimation, run : this.state.runAnimation, loop : false}} >
 
                 <ViroImage
                     scale={[1.4, 1.2, 1]}
@@ -175,7 +169,7 @@ var Viro360Theater = createReactClass({
     },
 
     _launchTheaterScene() {
-        this.props.sceneNavigator.jump("ViroTheater", {scene: require('./ViroTheater')});
+        this.props.sceneNavigator.jump("ViroTheater", {scene:require('./ViroTheater')});
     },
 
     _togglePauseVideo() {
@@ -186,7 +180,7 @@ var Viro360Theater = createReactClass({
 
     _playPreviousVideo() {
         var currentVideo = this.state.videoIndex;
-        if (currentVideo -1 > -1){
+        if (currentVideo - 1 > -1){
             this.setState({
                 videoIndex: (currentVideo - 1),
                 videoPaused: false
@@ -207,8 +201,8 @@ var Viro360Theater = createReactClass({
 });
 
 ViroAnimations.registerAnimations({
-    fadeOut:{properties:{opacity: 0.0}, duration:500},
-    fadeIn:{properties:{opacity: 0.0}, duration:500},
+    fadeOut:{properties:{opacity: 0.0}, duration: 500},
+    fadeIn:{properties:{opacity: 1.0}, duration: 500},
 });
 
 module.exports = Viro360Theater;

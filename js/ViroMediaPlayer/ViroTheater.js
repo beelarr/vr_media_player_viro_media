@@ -28,7 +28,6 @@ var videos = [
 
     require('./res/dude.mp4'),
     require('./res/yoda.mp4'),
-    require('./res/lord.mp4'),
 ];
 
 var ViroTheatre = createReactClass({
@@ -152,7 +151,7 @@ var ViroTheatre = createReactClass({
                     scale={[1, 1, 1]}
                     width={buttonSize}
                     height={buttonSize}
-                    source={require('./res/pause.png')}
+                    source={require('./res/play.png')}
                     hoverSource={require('./res/play_hover.png')}
                     clickSource={require('./res/play_hover.png')}
                     onClick={this._togglePauseVideo}
@@ -166,7 +165,7 @@ var ViroTheatre = createReactClass({
                     scale={[1, 1, 1]}
                     width={buttonSize}
                     height={buttonSize}
-                    source={require('./res/play.png')}
+                    source={require('./res/pause.png')}
                     hoverSource={require('./res/pause_hover.png')}
                     clickSource={require('./res/pause_hover.png')}
                     onClick={this._togglePauseVideo}
