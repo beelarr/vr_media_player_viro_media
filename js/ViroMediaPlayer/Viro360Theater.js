@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 
 import {
-    AppRegistry,
     ViroScene,
     Viro360Video,
     ViroButton,
